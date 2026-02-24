@@ -1,0 +1,1129 @@
+:root {
+    --gold: #D4AF37;
+    --navy: #0A1118;
+    --gold-light: rgba(212, 175, 55, 0.1);
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: #fbfbfc; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+    padding-top: 110px; /* Space for Ticker + Navbar */
+}
+
+h1, h2, h3, .font-bebas { 
+    font-family: 'Bebas Neue', cursive; 
+    letter-spacing: 1px;
+}
+
+.serif { font-family: 'Playfair Display', serif; }
+
+/* Ticker Fixes */
+.ticker-wrap { 
+    width: 100%; 
+    overflow: hidden; 
+    background: var(--navy); 
+    color: var(--gold); 
+    padding: 8px 0; 
+    position: fixed; 
+    top: 0; 
+    z-index: 2001; 
+}
+.ticker { 
+    display: inline-flex; 
+    white-space: nowrap; 
+    animation: tickerScroll 25s linear infinite; 
+}
+.ticker-item { padding: 0 40px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Navbar Positioning */
+.nav-pill-container { 
+    top: 50px; /* Sits below ticker */
+    transition: 0.3s; 
+    z-index: 2000;
+}
+
+.nav-link { 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.85rem; 
+    color: #444; 
+}
+
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+.mic-icon-circle { 
+    background: var(--navy); 
+    color: white; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Hero */
+.hero-section { min-height: 80vh; }
+.text-gold-gradient { 
+    background: linear-gradient(to bottom, #D4AF37, #8B6508); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Components */
+.bg-navy { background-color: var(--navy); }
+.bg-gold { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
+.text-gold { color: var(--gold); }
+.btn-gold { background: var(--gold); color: white; border: none; }
+
+.transition-up { transition: 0.4s ease; }
+.transition-up:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.08) !important; 
+    border-color: var(--gold) !important;
+}
+
+/* Mobile Navbar Adjustments */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        
+    }
+}
+
+/* ===============================
+   🔥 HERO PREMIUM BUTTONS
+================================ */
+
+/* Base Style */
+.btn-hero,
+.btn-hero-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ===============================
+   PRIMARY BUTTON (Dark → Gold Slide)
+================================ */
+
+.btn-hero {
+    background-color: #0a1118;
+    color: #ffffff;
+    border: 2px solid #0a1118;
+}
+
+.btn-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #d4af37;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.btn-hero span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-hero:hover {
+    color: #000;
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-hero:hover::after {
+    left: 0;
+}
+
+/* ===============================
+   OUTLINE BUTTON (Gold Border)
+================================ */
+
+.btn-hero-outline {
+    background: transparent;
+    color: #0a1118;
+    border: 2px solid #d4af37;
+}
+
+.btn-hero-outline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #d4af37;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.btn-hero-outline span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-hero-outline:hover {
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-hero-outline:hover::after {
+    left: 0;
+}
+
+/* Testimonials Styling */
+.testimonial-card {
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05) !important;
+    border-bottom: 4px solid var(--gold) !important;
+}
+
+
+
+/* Badge Pill above heading */
+.badge-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--gold-light);
+    color: var(--gold);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Image Container with Depth */
+.hero-image-container {
+    position: relative;
+    padding: 10px;
+}
+
+.hero-main-img {
+    border-radius: 40px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+    border: 10px solid white;
+    max-height: 550px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Glassmorphism Feature Card */
+.glass-feature-card {
+    position: absolute;
+    bottom: 40px;
+    right: -20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 20px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    max-width: 250px;
+    z-index: 10;
+}
+
+/* Navigation Controls */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+/* Featured Tech Card */
+.tech-card-featured {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--navy) 50%, #000 100%);
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card-inner {
+    background: rgba(10, 17, 24, 0.95);
+    border-radius: 2.9rem;
+    height: 100%;
+}
+
+.badge-ai {
+    background: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+
+/* Secondary Glass Cards */
+/* --- Initiative Image Card Styles --- */
+.glass-card {
+    position: relative;
+    background: #000; /* Fallback */
+    border-radius: 24px;
+    height: 400px; /* Fixed height for all bottom cards */
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* The Image Layer */
+.card-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.7);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* The Gradient Overlay to make text pop */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 17, 24, 0.95) 10%, rgba(10, 17, 24, 0.4) 50%, transparent 100%);
+    z-index: 2;
+}
+
+/* Content positioning over image */
+.glass-card .content-box {
+    position: relative;
+    z-index: 3;
+    padding: 30px;
+}
+
+/* Hover Effects */
+.glass-card:hover .card-image-bg {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.glass-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Full Box Image Styling */
+.ai-visual-box {
+    height: 350px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Clips the image to the box corners */
+    background-color: #000;
+}
+
+/* The Background Image */
+.ai-visual-box img.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Dimmed so text/icons on top are readable */
+    z-index: 1;
+}
+
+/* The Pulse Circle now acts as a 'Scanner' on top of the image */
+.pulse-circle {
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    animation: ai-pulse 4s infinite ease-in-out;
+}
+
+/* Keep your existing @keyframes ai-pulse */
+
+.bg-glass-dark {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Play Button */
+.play-btn-main {
+    width: 70px;
+    height: 70px;
+    background: var(--gold);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.play-btn-main:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(236, 204, 102, 0.6);
+}
+
+/* Custom Progress Bar */
+.progress-container {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress-bar-custom {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Waveform Visualizer */
+.waveform-visualizer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.waveform-visualizer span {
+    width: 3px;
+    height: 50%;
+    background: var(--gold);
+    opacity: 0.4;
+    animation: wave-dance 1.2s infinite ease-in-out;
+}
+
+@keyframes wave-dance {
+    0%, 100% { height: 20%; }
+    50% { height: 100%; }
+}
+
+/* Staggered animation for bars */
+.waveform-visualizer span:nth-child(even) { animation-delay: 0.2s; }
+.waveform-visualizer span:nth-child(3n) { animation-delay: 0.4s; }
+
+/* Album Art Polish */
+.album-art-wrapper {
+    position: relative;
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: 0.5s;
+}
+
+.album-art-wrapper:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.bg-wave-decoration {
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* View All & Nav Buttons */
+.btn-outline-gold {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    transition: 0.3s;
+}
+
+.btn-outline-gold:hover {
+    background: var(--gold);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.nav-arrow-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    color: var(--navy);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-arrow-btn:hover {
+    background: var(--navy);
+    color: var(--gold);
+    border-color: var(--navy);
+}
+
+/* Micro-Visualizer Animation */
+.live-visualizer {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 15px;
+}
+
+.live-visualizer span {
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+    border-radius: 10px;
+    animation: bounce 0.8s infinite ease-in-out;
+}
+
+.live-visualizer span:nth-child(2) { animation-delay: 0.1s; }
+.live-visualizer span:nth-child(3) { animation-delay: 0.2s; }
+.live-visualizer span:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+    0%, 100% { height: 4px; }
+    50% { height: 15px; }
+}
+
+/* Shadow depth for the Audio Card */
+.audio-player-card {
+    box-shadow: 0 40px 100px -20px rgba(10, 17, 24, 0.4) !important;
+}
+
+.archive-item .episode-cover {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.archive-item .episode-cover img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 17, 24, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.archive-item:hover .play-overlay { opacity: 1; }
+.archive-item:hover img { transform: scale(1.1); }
+
+.play-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--gold);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Header Effects */
+.header-overlay-glow {
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.archive-search-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.archive-search-glass input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Compact Episode Cards */
+.archive-item-compact {
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.archive-item-compact:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.episode-art-sidebar {
+    width: 120px;
+    min-width: 120px;
+}
+
+.episode-art-sidebar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 17, 24, 0.4);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.archive-item-compact:hover .play-btn-overlay {
+    opacity: 1;
+}
+
+/* Sidebar Styling */
+.filter-card .nav-link {
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.filter-card .nav-link.active {
+    background-color: var(--navy);
+    color: var(--gold) !important;
+}
+
+/* Master Player Fixed Bottom Z-Index */
+.master-player-bar {
+    z-index: 1050;
+    border-top: 2px solid var(--gold-light) !important;
+}
+
+
+/* Audio Card Refinements */
+.audio-player-card {
+    background: linear-gradient(145deg, #0a1118 0%, #151f28 100%);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    min-height: 480px;
+}
+
+/* ==========================================================================
+   VIDEO SECTION STYLES
+   ========================================================================== */
+
+/* 1. Section & Container Setup */
+#video.bg-navy {
+    background-color: #0a1118; /* Deep Midnight Blue */
+    overflow: hidden;
+}
+
+#videoAutoSlider {
+    position: relative;
+    padding: 0 15px;
+}
+
+/* 2. Fixed Size Video Card Logic */
+.video-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+/* 3. The 16:9 Thumbnail Fix */
+.video-thumb-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Forces all images to video format */
+    overflow: hidden;
+    border-radius: 15px;
+    background: #000;
+}
+
+.video-thumb-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image to fit the box without stretching */
+    transition: transform 0.6s ease;
+}
+
+/* 4. Badges & Overlays */
+.video-duration {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 17, 24, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.play-btn-sm {
+    width: 55px;
+    height: 55px;
+    background: #d4af37; /* Gold */
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transform: scale(0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* 5. Fixed Text Height & Alignment */
+.video-card .mt-3 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card h5 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 8px;
+    /* Forces title to exactly 2 lines then adds ... */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3.1em; /* Ensures boxes stay same height if title is 1 line */
+}
+
+/* 6. Advanced Hover Effects */
+.video-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #d4af37;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.video-card:hover img {
+    transform: scale(1.1);
+}
+
+.video-card:hover .video-hover-overlay {
+    opacity: 1;
+}
+
+.video-card:hover .play-btn-sm {
+    transform: scale(1);
+}
+
+.video-card:hover h5 {
+    color: #d4af37 !important;
+}
+
+/* 7. Navigation Arrows Fix */
+.custom-edge-arrow {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.custom-edge-arrow:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #000;
+}
+
+.carousel-control-prev { left: -25px; }
+.carousel-control-next { right: -25px; }
+
+/* 8. Helper Classes */
+.text-gold { color: #d4af37; }
+.ls-3 { letter-spacing: 3px; }
+.x-small { font-size: 0.7rem; }
+
+/* --- News Section Specific Button --- */
+.btn-news-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 40px;
+    background-color: #0a1118; /* Navy */
+    color: #ffffff;
+    border: 2px solid #0a1118;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* The Gold Slide Effect */
+.btn-news-more::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #d4af37; /* Gold */
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+/* Keep text and icon on top */
+.btn-news-more span, 
+.btn-news-more i {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+/* Hover States */
+.btn-news-more:hover {
+    color: #000 !important;
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-news-more:hover::after {
+    left: 0;
+}
+
+/* Arrow Animation */
+.btn-news-more i {
+    transition: transform 0.4s ease;
+}
+
+.btn-news-more:hover i {
+    transform: translateX(5px);
+}
+/* ===============================
+   🔥 CINEMATIC KHAKI FOOTER
+================================ */
+
+.khaki-footer {
+    position: relative;
+    background: linear-gradient(145deg, #0c0f14, #141922);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+
+/* Animated Golden Top Line */
+.khaki-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffc107, transparent);
+    animation: slideLine 4s linear infinite;
+}
+
+@keyframes slideLine {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(50%); }
+}
+
+/* Floating Glow */
+.khaki-footer::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,193,7,0.08), transparent 70%);
+    bottom: -200px;
+    left: -150px;
+    animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-40px); }
+}
+
+/* Scroll Animation */
+.footer-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.footer-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-animate:nth-child(1) { transition-delay: 0.1s; }
+.footer-animate:nth-child(2) { transition-delay: 0.3s; }
+.footer-animate:nth-child(3) { transition-delay: 0.5s; }
+.footer-animate:nth-child(4) { transition-delay: 0.7s; }
+
+/* Social Icons */
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 193, 7, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #ffc107;
+    color: #000;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
+}
+
+/* Footer Links */
+.footer-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffc107;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Newsletter Input */
+.footer-input {
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: white;
+}
+
+.footer-input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-input:focus {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 15px rgba(255,193,7,0.4);
+    color: white;
+}
+
+/* Button Glow */
+.footer-btn {
+    transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,193,7,0.5);
+}
+
+/* ===============================
+   🔥 CINEMATIC PREMIUM LOADER
+================================ */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0c0f14, #141922);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    overflow: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+}
+
+/* Animated moving background glow */
+#loader::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,193,7,0.12), transparent 70%);
+    animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+    from { transform: translate(-50px, -50px); }
+    to { transform: translate(50px, 50px); }
+}
+
+.loader-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* 🎙 Mic Floating Animation */
+.mic-icon {
+    color: white;
+    font-size: 110px;
+    margin-bottom: 5px;
+    animation: floatMic 2s ease-in-out infinite;
+}
+
+@keyframes floatMic {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Logo Text Animation */
+.loader-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 65px;
+    letter-spacing: 5px;
+    color: white;
+    opacity: 0;
+    animation: fadeSlide 1.5s ease forwards;
+}
+
+.loader-logo span {
+    color: #ffc107;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Golden Line Animation */
+.loader-line {
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffc107, #ff9800);
+    margin: 25px auto 0;
+    animation: lineGrow 2s ease forwards;
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 220px; }
+}
+
+/* Smooth Exit Animation */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+}
