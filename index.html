@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
 
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
-<link rel="shortcut icon" href="images/logo.png">
+<li nk rel="shortcut icon" href="images/logo.png">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -177,139 +177,243 @@
 </div>
     </section>
 
-<section id="audio" class="py-5 bg-white">
+    <section id="audio" class="py-5 bg-white">
     <div class="container py-5">
+
+        <!-- SECTION HEADER -->
         <div class="d-flex justify-content-between align-items-end mb-5">
             <div>
                 <h6 class="text-gold fw-bold text-uppercase ls-3">Broadcast Archives</h6>
-                <h2 class="display-4 fw-bold font-bebas text-navy mb-0">Listen to the <span class="text-gold">Airwaves</span></h2>
+                <h2 class="display-4 fw-bold font-bebas text-navy mb-0">
+                    Listen to the <span class="text-gold">Airwaves</span>
+                </h2>
+                <p class="text-muted mt-3" style="max-width:600px;">
+                    Dive into powerful stories from the frontline.
+                    Each episode captures real experiences and innovations
+                    shaping modern policing in Nagpur.
+                </p>
             </div>
+
             <div class="d-none d-md-block">
                 <a href="audio.html" class="btn btn-outline-gold rounded-pill px-4 fw-bold shadow-sm">
-                    View All Episodes <span class="ms-2">→</span>
+                    View All Episodes →
                 </a>
             </div>
         </div>
 
-        <div id="audioCarousel" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
+        <!-- CAROUSEL -->
+        <div id="audioCarousel" class="carousel slide" data-bs-ride="false">
+
+            <!-- DOTS -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#audioCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#audioCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#audioCarousel" data-bs-slide-to="2"></button>
+            </div>
+
             <div class="carousel-inner">
-                
+
+                <!-- ===================== -->
+                <!-- EPISODE 84 -->
+                <!-- ===================== -->
                 <div class="carousel-item active">
-                    <div class="audio-player-card p-4 p-md-5 rounded-5 text-white shadow-lg position-relative overflow-hidden">
-                        <div class="player-bg-glow"></div>
-                        <div class="row align-items-center position-relative z-1">
-                            <div class="col-lg-7">
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <span class="badge rounded-pill bg-gold text-navy fw-bold px-3">INTERVIEW</span>
-                                    <div class="live-visualizer"><span></span><span></span><span></span><span></span></div>
-                                </div>
-                                <h2 class="display-5 fw-bold mb-3 font-bebas">The First Responder's Heart</h2>
-                                <p class="text-light opacity-75 mb-4 fs-5">A deep dive into the split-second decisions made at Sitabuldi Square that saved a life.</p>
-                               <div class="player-interface p-4 rounded-4 bg-glass-dark mb-4">
-    <audio id="audio-ep84" src="audio/ips.mp3"></audio>
+                    <div class="audio-player-card p-5 rounded-5 text-white shadow-lg bg-dark">
+                        <div class="row align-items-center">
 
-    <div class="d-flex align-items-center gap-4">
-        <button class="play-btn-main shadow" id="playBtn" onclick="toggleAudio()">▶</button>
-        
-        <div class="flex-grow-1">
-            <div class="d-flex justify-content-between mb-2 small font-monospace">
-                <span class="text-gold" id="currentTime">00:00</span>
-                <span class="opacity-50">EPISODE #84</span>
-                <span class="opacity-50" id="duration">00:00</span>
-            </div>
-            <div class="progress-container">
-                <div id="progress-bar" class="progress-bar-custom" style="width:0%;"></div>
-            </div>
-        </div>
-    </div>
-</div>
-                                <div class="d-none d-lg-flex gap-3 align-items-center">
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="prev">❮</button>
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="next">❯</button>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 d-none d-lg-block text-center">
-                                <img src="images/WhatsApp Image 2025-08-25 at 2.53.12 PM.jpeg"  loading="lazy"class="img-fluid rounded-4 shadow-2xl album-art" alt="Ep 84">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="audio-player-card p-4 p-md-5 rounded-5 text-white shadow-lg position-relative overflow-hidden" style="background: linear-gradient(145deg, #050a0f 0%, #102a43 100%);">
-                        <div class="player-bg-glow" style="background: radial-gradient(circle, rgba(0, 150, 255, 0.1) 0%, transparent 70%);"></div>
-                        <div class="row align-items-center position-relative z-1">
                             <div class="col-lg-7">
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <span class="badge rounded-pill bg-info text-white fw-bold px-3">AI UPDATE</span>
-                                    <div class="live-visualizer"><span></span><span></span><span></span><span></span></div>
-                                </div>
-                                <h2 class="display-5 fw-bold mb-3 font-bebas">SIMBA: The Digital Watchman</h2>
-                                <p class="text-light opacity-75 mb-4 fs-5">Exploring how AI-powered LLMs like Crime GPT are assisting Nagpur's detectives in real-time data analysis.</p>
-                                <div class="player-interface p-4 rounded-4 bg-glass-dark mb-4">
-                                    
+                                <span class="badge rounded-pill bg-warning text-dark fw-bold px-3 mb-3">
+                                    INTERVIEW
+                                </span>
+
+                                <h2 class="display-5 fw-bold font-bebas mb-3">
+                                    The First Responder's Heart
+                                </h2>
+
+                                <p class="opacity-75 mb-4">
+                                    A gripping conversation revealing the emotional
+                                    and tactical challenges faced during a
+                                    critical emergency response.
+                                </p>
+
+                                <!-- PLAYER -->
+                                <div class="player-interface p-4 rounded-4 bg-secondary bg-opacity-25">
+
                                     <div class="d-flex align-items-center gap-4">
-                                        <button class="play-btn-main shadow" style="background: #00d2ff;">▶</button>
+
+                                        <button class="btn btn-warning rounded-circle play-btn"
+                                            onclick="playEpisode('audio/ips.mp3','The First Responder', this)">
+                                            ▶
+                                        </button>
+
                                         <div class="flex-grow-1">
-                                            <div class="d-flex justify-content-between mb-2 small font-monospace">
-                                                <span style="color: #00d2ff;">08:15</span>
-                                                <span class="opacity-50">EPISODE #85</span>
-                                                <span class="opacity-50">38:20</span>
+                                            <div class="d-flex justify-content-between small">
+                                                <span class="currentTime">00:00</span>
+                                                <span>EPISODE #84</span>
+                                                <span class="duration">00:00</span>
                                             </div>
-                                            <div class="progress-container"><div class="progress-bar-custom" style="width:22%; background: #00d2ff;"></div></div>
+
+                                            <div class="progress mt-2 progress-container"
+                                                 style="height:6px; cursor:pointer;"
+                                                 onclick="seek(event)">
+                                                <div class="progress-bar bg-warning progressBar"
+                                                     style="width:0%">
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
-                                <div class="d-none d-lg-flex gap-3 align-items-center">
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="prev">❮</button>
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="next">❯</button>
-                                </div>
                             </div>
+
                             <div class="col-lg-5 d-none d-lg-block text-center">
-                                <div class="placeholder-art-glow border-info"><span class="display-1">🤖</span></div>
+                                <img src="images/WhatsApp Image 2025-08-25 at 2.53.12 PM.jpeg"
+                                    class="img-fluid rounded-4 shadow"
+                                    alt="Episode 84">
                             </div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- ===================== -->
+                <!-- EPISODE 85 -->
+                <!-- ===================== -->
                 <div class="carousel-item">
-                    <div class="audio-player-card p-4 p-md-5 rounded-5 text-white shadow-lg position-relative overflow-hidden" style="background: linear-gradient(145deg, #1a0f05 0%, #2b1d10 100%);">
-                        <div class="player-bg-glow" style="background: radial-gradient(circle, rgba(255, 100, 0, 0.1) 0%, transparent 70%);"></div>
-                        <div class="row align-items-center position-relative z-1">
+                    <div class="audio-player-card p-5 rounded-5 text-white shadow-lg bg-dark">
+                        <div class="row align-items-center">
+
                             <div class="col-lg-7">
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <span class="badge rounded-pill bg-danger text-white fw-bold px-3">HUMANITY</span>
-                                    <div class="live-visualizer"><span></span><span></span><span></span><span></span></div>
-                                </div>
-                                <h2 class="display-5 fw-bold mb-3 font-bebas">Mission Mukti Stories</h2>
-                                <p class="text-light opacity-75 mb-4 fs-5">True accounts of rehabilitation and long-term support provided to victims through this humanitarian initiative.</p>
-                                <div class="player-interface p-4 rounded-4 bg-glass-dark mb-4">
+                                <span class="badge rounded-pill bg-info text-white fw-bold px-3 mb-3">
+                                    AI UPDATE
+                                </span>
+
+                                <h2 class="display-5 fw-bold font-bebas mb-3">
+                                    SIMBA: The Digital Watchman
+                                </h2>
+
+                                <p class="opacity-75 mb-4">
+                                    AI-driven analytics are revolutionizing crime detection and investigation by processing vast datasets in real time, enabling faster threat identification and proactive policing. These technologies integrate sources like CCTV, social media, and communication records to uncover patterns invisible to human analysts.
+                                </p>
+
+                                <div class="player-interface p-4 rounded-4 bg-secondary bg-opacity-25">
                                     <div class="d-flex align-items-center gap-4">
-                                        <button class="play-btn-main shadow" style="background: #ff4b2b;">▶</button>
+
+                                        <button class="btn btn-info rounded-circle play-btn"
+                                            onclick="playEpisode('audio/simba.mp3','SIMBA: The Digital Watchman', this)">
+                                            ▶
+                                        </button>
+
                                         <div class="flex-grow-1">
-                                            <div class="d-flex justify-content-between mb-2 small font-monospace">
-                                                <span style="color: #ff4b2b;">15:40</span>
-                                                <span class="opacity-50">EPISODE #86</span>
-                                                <span class="opacity-50">52:10</span>
+                                            <div class="d-flex justify-content-between small">
+                                                <span class="currentTime">00:00</span>
+                                                <span>EPISODE #85</span>
+                                                <span class="duration">00:00</span>
                                             </div>
-                                            <div class="progress-container"><div class="progress-bar-custom" style="width:40%; background: #ff4b2b;"></div></div>
+
+                                            <div class="progress mt-2 progress-container"
+                                                 style="height:6px; cursor:pointer;"
+                                                 onclick="seek(event)">
+                                                <div class="progress-bar bg-info progressBar"
+                                                     style="width:0%">
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
-                                <div class="d-none d-lg-flex gap-3 align-items-center">
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="prev">❮</button>
-                                    <button class="nav-arrow-btn" type="button" data-bs-target="#audioCarousel" data-bs-slide="next">❯</button>
+                            </div>
+
+                            <div class="col-lg-5 d-none d-lg-block text-center">
+                                <img src="images/NYT-2.avif"
+                                    class="img-fluid rounded-4 shadow"
+                                    alt="Episode 85">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== -->
+                <!-- EPISODE 86 -->
+                <!-- ===================== -->
+                <div class="carousel-item">
+                    <div class="audio-player-card p-5 rounded-5 text-white shadow-lg bg-dark">
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-7">
+                                <span class="badge rounded-pill bg-danger text-white fw-bold px-3 mb-3">
+                                    HUMANITY
+                                </span>
+
+                                <h2 class="display-5 fw-bold font-bebas mb-3">
+                                    Mission Mukti Stories
+                                </h2>
+
+                                <p class="opacity-75 mb-4">
+                                   Mission Mukti initiatives focus on rehabilitation for addiction, disabilities, and vulnerability, sharing inspiring stories of 
+                                   individuals reclaiming their lives through de-addiction, skill-building, and community support.
+                                </p>
+
+                                <div class="player-interface p-4 rounded-4 bg-secondary bg-opacity-25">
+                                    <div class="d-flex align-items-center gap-4">
+
+                                        <button class="btn btn-danger rounded-circle play-btn"
+                                            onclick="playEpisode('audio/nagpur.mp3','Mission Mukti Stories', this)">
+                                            ▶
+                                        </button>
+
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between small">
+                                                <span class="currentTime">00:00</span>
+                                                <span>EPISODE #86</span>
+                                                <span class="duration">00:00</span>
+                                            </div>
+
+                                            <div class="progress mt-2 progress-container"
+                                                 style="height:6px; cursor:pointer;"
+                                                 onclick="seek(event)">
+                                                <div class="progress-bar bg-danger progressBar"
+                                                     style="width:0%">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-5 d-none d-lg-block text-center">
-                                <div class="placeholder-art-glow border-danger"><span class="display-1">🕊️</span></div>
+                                <img src="images/1745968832397.jpg"
+                                    class="img-fluid rounded-4 shadow"
+                                    alt="Episode 86">
                             </div>
+
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            <!-- ARROWS -->
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#audioCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#audioCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
         </div>
+
+        <!-- GLOBAL AUDIO -->
+        <audio id="globalAudio"></audio>
+
     </div>
 </section>
 
