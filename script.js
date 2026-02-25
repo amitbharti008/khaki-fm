@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 // ======================================
 // PLAY EPISODE FUNCTION (PER SLIDE)
 // ======================================
@@ -153,3 +154,75 @@ function formatTime(time) {
     const seconds = Math.floor(time % 60);
     return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
 }
+
+// ==============================
+// FOOTER SCROLL REVEAL FIX
+// ==============================
+
+const revealElements = document.querySelectorAll('.footer-animate');
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+
+
+// ==============================
+// IMPACT COUNTER ANIMATION
+// ==============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const counters = document.querySelectorAll(".counter");
+
+    const speed = 200; // lower = faster
+
+    const startCounter = (counter) => {
+
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+
+        const increment = target / speed;
+
+        const update = () => {
+            count += increment;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(update);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        update();
+    };
+
+    // Use Intersection Observer (Professional Way)
+    const observer = new IntersectionObserver((entries, obs) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                startCounter(entry.target);
+                obs.unobserve(entry.target); // run once only
+
+            }
+
+        });
+
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+
+});

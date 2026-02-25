@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Mission | Khaki FM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ===============================
+   GLOBAL
+================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 100px;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.text-gold {
+    color: #ffc107;
+}
+
+.bg-navy {
+    background: linear-gradient(135deg,#0A1118,#111c28);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-navy::after {
+    content: "🛡";
+    position: absolute;
+    font-size: 250px;
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.nav-pill-container {
+    z-index: 1000;
+}
+
+/* ===============================
+   MISSION CARD
+================================ */
+
+.mission-card {
+    position: relative;
+    background: #fff;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,193,7,0.15), transparent);
+    transition: all 0.6s ease;
+}
+
+.mission-card:hover::before {
+    left: 100%;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffc107;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+
+.timeline {
+    position: relative;
+    margin: 60px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #ffc107;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #ffc107;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 8px;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 40px;
+    }
+    .timeline-dot {
+        left: 0 !important;
+        right: auto;
+    }
+}
+
+/* ===============================
+   STATS
+================================ */
+
+.stat-box {
+    background: linear-gradient(145deg,#0c0f14,#141922);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    transition: 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(255,193,7,0.3);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top nav-pill-container" id="mainNavbar">
+        <div class="container bg-white shadow-sm rounded-pill px-4 py-2 border">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="mic-icon-circle me-2">🎙</div>
+                <div class="brand-text">
+                    <h1 class="mb-0 h4 fw-bold text-dark">KHAKI <span class="text-gold"> FM</span></h1>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#khakiNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="khakiNav">
+            <ul class="navbar-nav ms-auto me-3"> 
+                <li class="nav-item"><a class="nav-link px-2" href="index.html"> Home</a></li>
+            </ul>
+            <a href="joinCampaign.html" class="btn btn-dark rounded-pill px-4 fw-bold shadow-sm">Join Campaign</a>
+        </div>
+
+        </div>
+    </nav>
+
+<!-- HERO -->
+<section class="py-5 bg-navy text-white text-center position-relative overflow-hidden">
+    <div class="container py-5">
+        <h6 class="text-warning fw-bold text-uppercase">Our Purpose</h6>
+        <h1 class="display-3 fw-bold font-bebas mt-3 section-title">
+            Beyond The Badge
+        </h1>
+        <p class="lead mt-4 mx-auto" style="max-width:700px;">
+            Khaki FM showcases courage, innovation,
+            and the human side of the Nagpur Police force.
+        </p>
+    </div>
+
+    <!-- Floating Gold Particles -->
+    <div class="particle" style="left:10%; animation-delay:0s;"></div>
+    <div class="particle" style="left:30%; animation-delay:2s;"></div>
+    <div class="particle" style="left:50%; animation-delay:4s;"></div>
+    <div class="particle" style="left:70%; animation-delay:6s;"></div>
+    <div class="particle" style="left:90%; animation-delay:8s;"></div>
+</section>
+
+<!-- STRATEGIC MISSIONS -->
+<section class="py-5 bg-light">
+<div class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold font-bebas section-title">
+Strategic <span class="text-warning">Missions</span>
+</h2>
+<p class="text-muted mt-3 mx-auto" style="max-width:700px;">
+Nagpur Police continues to expand its impact through modern initiatives,
+technology adoption, and community collaboration.
+</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Women Safety Initiative</h5>
+<p class="small text-muted mt-3">
+Helplines, rapid response teams, and safe city surveillance projects.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Cyber Intelligence Unit</h5>
+<p class="small text-muted mt-3">
+Advanced cyber investigation lab tackling digital fraud and phishing.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Smart Traffic Control</h5>
+<p class="small text-muted mt-3">
+AI-based signal systems reducing congestion and road incidents.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Bharosa Cell</h5>
+<p class="small text-muted mt-3">
+Counseling and legal support for women and children.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Operation Thunder</h5>
+<p class="small text-muted mt-3">
+Anti-narcotics drive targeting organized drug networks.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Disaster Response Unit</h5>
+<p class="small text-muted mt-3">
+Rapid response teams for flood, fire, and emergency situations.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Youth Police Cadet</h5>
+<p class="small text-muted mt-3">
+Engaging students in civic discipline and responsibility.
+</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 reveal">
+<div class="mission-card p-4 rounded-4 shadow-sm h-100">
+<h5 class="fw-bold">Digital Transparency</h5>
+<p class="small text-muted mt-3">
+Online grievance redressal and digital FIR tracking system.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="py-5 bg-white">
+<div class="container text-center">
+
+<h2 class="fw-bold font-bebas display-5 mb-5 section-title">
+Mission <span class="text-warning">Achievements</span>
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3 reveal">
+<div class="stat-box">
+<div class="stat-number counter" data-target="500">0</div>
+<p>Families Reunited</p>
+</div>
+</div>
+
+<div class="col-md-3 reveal">
+<div class="stat-box">
+<div class="stat-number counter" data-target="2000">0</div>
+<p>Cyber Cases Solved</p>
+</div>
+</div>
+
+<div class="col-md-3 reveal">
+<div class="stat-box">
+<div class="stat-number counter" data-target="15">0</div>
+<p>% Crime Reduction</p>
+</div>
+</div>
+
+<div class="col-md-3 reveal">
+<div class="stat-box">
+<div class="stat-number counter" data-target="120">0</div>
+<p>Awareness Drives</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="py-5 bg-navy text-white text-center">
+<div class="container">
+
+<h2 class="fw-bold font-bebas display-5 mb-4 section-title">
+Leadership Spotlight
+</h2>
+
+<p class="lead fst-italic mx-auto" style="max-width:800px;">
+"Policing is not just about enforcing the law —
+it is about protecting dignity, inspiring trust,
+and serving with compassion."
+</p>
+
+<h5 class="fw-bold text-warning mt-4">
+Dr. Ravinder Kumar Singal
+</h5>
+<small>Commissioner of Police, Nagpur City</small>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-warning text-dark text-center">
+<div class="container">
+<h2 class="fw-bold font-bebas display-5 section-title">
+Join The Mission
+</h2>
+<p class="mt-3">
+Be part of a movement bringing courage and transformation to light.
+</p>
+<a href="audio.html" class="btn btn-dark rounded-pill px-5 mt-4">
+Listen Now
+</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+<p class="mb-0 small">
+© 2026 Khaki FM | Where Every Badge Has a Story
+</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* COUNTER ANIMATION */
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+    const increment = target / 200;
+
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(updateCounter, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+</script>
+
+</body>
+</html>

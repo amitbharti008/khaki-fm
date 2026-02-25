@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Join The Campaign | Khaki FM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* GLOBAL */
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 90px;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.text-gold {
+    color: #ffc107;
+}
+
+.bg-navy {
+    background: linear-gradient(135deg,#0A1118,#111c28);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Particles */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ffc107;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: floatParticle 12s infinite linear;
+}
+
+@keyframes floatParticle {
+    from { transform: translateY(0px); opacity: 0.2; }
+    to { transform: translateY(-800px); opacity: 0; }
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Campaign Cards */
+.campaign-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.campaign-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffc107;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Form */
+.form-control:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 10px rgba(255,193,7,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-pill-container" id="mainNavbar">
+        <div class="container bg-white shadow-sm rounded-pill px-4 py-2 border">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="mic-icon-circle me-2">🎙</div>
+                <div class="brand-text">
+                    <h1 class="mb-0 h4 fw-bold text-dark">KHAKI <span class="text-gold"> FM</span></h1>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#khakiNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="khakiNav">
+            <ul class="navbar-nav ms-auto me-3"> 
+               
+                <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        </div>
+    </nav> 
+
+<!-- HERO -->
+<section class="py-5 bg-navy text-white text-center position-relative">
+<div class="container py-5">
+<h6 class="text-gold fw-bold text-uppercase">Take Action</h6>
+<h1 class="display-3 fw-bold font-bebas mt-3">
+Join The Campaign
+</h1>
+<p class="lead mt-4 mx-auto" style="max-width:700px;">
+Be part of a movement that connects citizens and policing
+through awareness, collaboration, and innovation.
+</p>
+</div>
+
+<!-- Floating Gold Particles -->
+<div class="particle" style="left:10%; animation-delay:0s;"></div>
+<div class="particle" style="left:30%; animation-delay:2s;"></div>
+<div class="particle" style="left:50%; animation-delay:4s;"></div>
+<div class="particle" style="left:70%; animation-delay:6s;"></div>
+<div class="particle" style="left:90%; animation-delay:8s;"></div>
+
+</section>
+
+<!-- CAMPAIGN OPTIONS -->
+<section class="py-5 bg-light">
+<div class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold font-bebas display-5">
+Choose Your <span class="text-gold">Role</span>
+</h2>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4 reveal">
+<div class="campaign-card text-center">
+<h4 class="fw-bold">Volunteer</h4>
+<p class="text-muted small mt-3">
+Assist in awareness drives, community programs,
+and digital outreach initiatives.
+</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="campaign-card text-center">
+<h4 class="fw-bold">Community Partner</h4>
+<p class="text-muted small mt-3">
+Collaborate with us on events, youth programs,
+and public safety campaigns.
+</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="campaign-card text-center">
+<h4 class="fw-bold">Supporter</h4>
+<p class="text-muted small mt-3">
+Stay updated, spread awareness,
+and amplify mission-driven stories.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- REGISTRATION FORM -->
+<section class="py-5 bg-white">
+<div class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold font-bebas display-5">
+Register <span class="text-gold">Now</span>
+</h2>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-lg-8 reveal">
+
+<form class="p-5 shadow rounded-4 bg-light">
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<input type="text" class="form-control" placeholder="Full Name" required>
+</div>
+
+<div class="col-md-6">
+<input type="email" class="form-control" placeholder="Email Address" required>
+</div>
+
+<div class="col-md-6">
+<input type="text" class="form-control" placeholder="Phone Number">
+</div>
+
+<div class="col-md-6">
+<select class="form-control">
+<option>Select Role</option>
+<option>Volunteer</option>
+<option>Community Partner</option>
+<option>Supporter</option>
+</select>
+</div>
+
+<div class="col-12">
+<textarea class="form-control" rows="4" placeholder="Why do you want to join?"></textarea>
+</div>
+
+<div class="col-12 text-center mt-4">
+<button type="submit" class="btn btn-warning px-5 rounded-pill fw-bold">
+Submit Application
+</button>
+</div>
+
+</div>
+</form>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+<p class="mb-0 small">
+© 2026 Khaki FM | Where Every Badge Has a Story
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* Scroll Reveal */
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+</script>
+
+</body>
+</html>

@@ -12,6 +12,11 @@ body {
     padding-top: 110px; /* Space for Ticker + Navbar */
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 h1, h2, h3, .font-bebas { 
     font-family: 'Bebas Neue', cursive; 
     letter-spacing: 1px;
@@ -77,6 +82,16 @@ h1, h2, h3, .font-bebas {
     -webkit-text-fill-color: transparent; 
 }
 
+.hero-title {
+    font-size: 2.2rem;
+}
+
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+}
+
 /* Components */
 .bg-navy { background-color: var(--navy); }
 .bg-gold { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
@@ -99,6 +114,12 @@ h1, h2, h3, .font-bebas {
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-pill-container .container {
+        border-radius: 1rem !important;
     }
 }
 
@@ -258,8 +279,24 @@ h1, h2, h3, .font-bebas {
 }
 
 /* Navigation Controls */
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+}
+
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
 }
 
 /* Featured Tech Card */
